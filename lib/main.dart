@@ -132,9 +132,13 @@ class _MyAppState extends State<MyApp> {
                       PointerDeviceKind.touch
                     },
                   ),
-                  theme: themeController.darkTheme ? themeController.darkColor == null ? dark() : dark(color
-                      : themeController.darkColor!) : themeController.lightColor == null ? light()
-                      : light(color: themeController.lightColor!),
+                  theme: themeController.darkTheme
+                      ? themeController.darkColor == null
+                          ? dark()
+                          : dark(color: themeController.darkColor!)
+                      : themeController.lightColor == null
+                          ? light()
+                          : light(color: themeController.lightColor!),
                   // theme: dark(),
                   locale: localizeController.locale,
                   translations: Messages(languages: widget.languages),
@@ -158,7 +162,7 @@ class _MyAppState extends State<MyApp> {
                                     : '')) {
                           return ResponsiveHelper.isWeb()
                               ? const Align(
-                                  alignment: Alignment.bottomCenter,
+                                  alignment: Alignment.center,
                                   child: CookiesView())
                               : const SizedBox();
                         } else {

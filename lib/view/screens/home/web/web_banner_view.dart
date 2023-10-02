@@ -48,7 +48,7 @@ class WebBannerView extends StatelessWidget {
                 )
                 .toList(),
             options: CarouselOptions(
-              aspectRatio: 2.5,
+              aspectRatio: 13 / 3,
               viewportFraction: 0.7,
               autoPlay: true,
               autoPlayInterval: const Duration(seconds: 6),
