@@ -55,7 +55,7 @@ class _ItemsViewState extends State<ItemsView> {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisSpacing: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeExtremeLarge : Dimensions.paddingSizeLarge,
           mainAxisSpacing: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeExtremeLarge : 0.01,
-          childAspectRatio: ResponsiveHelper.isDesktop(context) && widget.stores != null ? (1/0.8) : widget.showTheme1Store ? 2 : ResponsiveHelper.isMobile(context) ? 3.8 : 3,
+          childAspectRatio: ResponsiveHelper.isDesktop(context) && widget.stores != null ? (1/0.9) : widget.showTheme1Store ? 2 : ResponsiveHelper.isMobile(context) ? 3.8 : 3,
           crossAxisCount: ResponsiveHelper.isMobile(context) ? 1 : ResponsiveHelper.isDesktop(context) && widget.stores != null  ? 4 : 3,
         ),
         physics: widget.isScrollable ? const BouncingScrollPhysics() : const NeverScrollableScrollPhysics(),

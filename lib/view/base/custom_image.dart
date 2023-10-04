@@ -9,7 +9,7 @@ class CustomImage extends StatelessWidget {
   final BoxFit? fit;
   final bool isNotification;
   final String placeholder;
-  const CustomImage({Key? key, required this.image, this.height, this.width, this.fit = BoxFit.cover, this.isNotification = false, this.placeholder = ''}) : super(key: key);
+  const  CustomImage({Key? key, required this.image, this.height, this.width, this.fit = BoxFit.cover, this.isNotification = false, this.placeholder = ''}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

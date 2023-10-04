@@ -51,7 +51,7 @@ class WebPopularStoreView extends StatelessWidget {
             ? GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,
-                  childAspectRatio: (1 / 0.8),
+                  childAspectRatio: (1 / 0.9),
                   crossAxisSpacing: Dimensions.paddingSizeExtremeLarge,
                   mainAxisSpacing: Dimensions.paddingSizeExtremeLarge,
                 ),
@@ -79,17 +79,17 @@ class WebPopularStoreView extends StatelessWidget {
                             width: 500,
                             decoration: BoxDecoration(
                               color: Theme.of(context).cardColor,
-                              borderRadius:
-                                  BorderRadius.circular(Dimensions.radiusSmall),
-                              border: Border.all(
-                                  color: Theme.of(context)
-                                      .disabledColor
-                                      .withOpacity(0.2)),
+                              // borderRadius:
+                              //     BorderRadius.circular(Dimensions.radiusSmall),
+                              // border: Border.all(
+                              //     color: Theme.of(context)
+                              //         .disabledColor
+                              //         .withOpacity(0.2)),
                               // boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5, spreadRadius: 1)],
                             ),
                             padding: const EdgeInsets.all(1),
                             child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Stack(children: [
@@ -155,9 +155,9 @@ class WebPopularStoreView extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               color:
                                                   Theme.of(context).cardColor,
-                                              borderRadius:
-                                                  BorderRadius.circular(
-                                                      Dimensions.radiusSmall),
+                                              // borderRadius:
+                                              //     BorderRadius.circular(
+                                              //         Dimensions.radiusSmall),
                                             ),
                                             child: Icon(
                                               isWished
@@ -184,7 +184,7 @@ class WebPopularStoreView extends StatelessWidget {
                                               Dimensions.paddingSizeExtraSmall),
                                       child: Column(
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                              CrossAxisAlignment.center,
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
@@ -217,8 +217,41 @@ class WebPopularStoreView extends StatelessWidget {
                                                   storeList[index].avgRating,
                                               ratingCount:
                                                   storeList[index].ratingCount,
-                                              size: 15,
+                                              size: 13,
                                             ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            ElevatedButton(
+                                              onPressed: () {
+                                                Get.toNamed(
+                                                  RouteHelper.getStoreRoute(
+                                                      id: storeList[index].id,
+                                                      page: 'store'),
+                                                  arguments: StoreScreen(
+                                                      store: storeList[index],
+                                                      fromModule: false),
+                                                );
+                                              },
+                                              style: ButtonStyle(
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                  backgroundColor:
+                                                      MaterialStateProperty.all(
+                                                          Color(0xff1C441A))),
+                                              child: Text(
+                                                '       available near you       ',
+                                                style: robotoRegular.copyWith(
+                                                    fontSize: 12),
+                                              ),
+                                            )
                                           ]),
                                     ),
                                   ),
@@ -311,35 +344,41 @@ class PopularStoreShimmer extends StatelessWidget {
               ]),
           child: Shimmer(
             duration: const Duration(seconds: 2),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Container(
-                height: 120,
-                width: 500,
-                decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.vertical(
-                        top: Radius.circular(Dimensions.radiusSmall)),
-                    color: Colors.grey[300]),
-              ),
-              Expanded(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.all(Dimensions.paddingSizeExtraSmall),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                            height: 15, width: 100, color: Colors.grey[300]),
-                        const SizedBox(height: 5),
-                        Container(
-                            height: 10, width: 130, color: Colors.grey[300]),
-                        const SizedBox(height: 5),
-                        const RatingBar(rating: 0.0, size: 12, ratingCount: 0),
-                      ]),
-                ),
-              ),
-            ]),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 120,
+                    width: 500,
+                    decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(Dimensions.radiusSmall)),
+                        color: Colors.grey[300]),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(
+                          Dimensions.paddingSizeExtraSmall),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                                height: 15,
+                                width: 100,
+                                color: Colors.grey[300]),
+                            const SizedBox(height: 5),
+                            Container(
+                                height: 10,
+                                width: 130,
+                                color: Colors.grey[300]),
+                            const SizedBox(height: 5),
+                            const RatingBar(
+                                rating: 0.0, size: 12, ratingCount: 0),
+                          ]),
+                    ),
+                  ),
+                ]),
           ),
         );
       },

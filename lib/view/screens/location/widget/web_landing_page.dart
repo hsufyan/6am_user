@@ -100,9 +100,9 @@ class _WebLandingPageState extends State<WebLandingPage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                   Text(
-                                      splashController
-                                              .landingModel?.fixedHeaderTitle ??
-                                          '',
+                                      // splashController
+                                      //         .landingModel?.fixedHeaderTitle ??
+                                          'Kushmapz',
                                       style: robotoBold.copyWith(fontSize: 35)),
                                   const SizedBox(
                                       height: Dimensions.paddingSizeLarge),

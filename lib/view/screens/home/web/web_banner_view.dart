@@ -49,11 +49,12 @@ class WebBannerView extends StatelessWidget {
                 .toList(),
             options: CarouselOptions(
               aspectRatio: 13 / 3,
-              viewportFraction: 0.7,
+              viewportFraction: 1.0,
               autoPlay: true,
               autoPlayInterval: const Duration(seconds: 6),
               autoPlayAnimationDuration: const Duration(milliseconds: 400),
               enlargeCenterPage: true,
+           
               onPageChanged: (index, reason) {},
             ),
           )

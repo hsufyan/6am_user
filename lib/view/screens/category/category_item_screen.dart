@@ -195,7 +195,7 @@ class CategoryItemScreenState extends State<CategoryItemScreen> with TickerProvi
                         padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: Dimensions.paddingSizeExtraSmall),
                         margin: const EdgeInsets.only(right: Dimensions.paddingSizeSmall),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
+                          borderRadius: BorderRadius.circular(Dimensions.radiusExtraLarge),
                           color: index == catController.subCategoryIndex ? Theme.of(context).primaryColor.withOpacity(0.1) : Colors.transparent,
                         ),
                         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
