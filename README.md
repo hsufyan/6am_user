@@ -4,9 +4,6 @@
   A complete multi-vendor online shopping solution.
 </p>
 
-<p align="center">
-  <img src="assets/images/logo.png" width="90%" />
-</p>
 
 ---
 
@@ -62,16 +59,6 @@ This project is built with clean architecture, modular code, and scalable folder
 
 ---
 
-## 🖼 UI Preview
-
-
-<p align="center">
-  <img src="assets/screenshots/screen1.png" width="30%" />
-  <img src="assets/screenshots/screen2.png" width="30%" />
-  <img src="assets/screenshots/screen3.png" width="30%" />
-</p>
-
----
 
 ## 🏗 Tech Stack
 
