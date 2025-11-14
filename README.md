@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/banner.png" width="90%" />
+  <img src="assets/images/logo.png" width="90%" />
 </p>
 
 ---
