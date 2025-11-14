@@ -78,24 +78,44 @@ This project is built with clean architecture, modular code, and scalable folder
 ## 📂 Project Structure
 
 lib/
-│── main.dart
-│── configs/
-│── core/
-│── models/
-│── controllers/
-│── services/
-│── views/
-│ ├── auth/
-│ ├── home/
-│ ├── vendor/
-│ ├── cart/
-│ ├── orders/
-│── widgets/
-│── utils/
+
+main.dart
+
+configs/ – App themes, routes, global constants
+
+core/ – Global helpers and base classes
+
+models/ – Data models
+
+controllers/ – State management & business logic
+
+services/
+
+api/ – Remote API services
+
+local/ – Local storage & database services
+
+views/ – All UI screens
+
+auth/ – Login, register, OTP, etc.
+
+home/ – Dashboard screens
+
+vendor/ – Vendor-related UI
+
+cart/ – Cart and checkout screens
+
+orders/ – Order history & order detail screens
+
+widgets/ – Reusable UI components
+
+utils/ – Helpers, formatters, validators, constants
+
 assets/
-│── images/
-│── icons/
-│── screenshots/
+
+images/ – App images
+
+icons/ – Icon assets
 
 
 🧑‍💻 Developer
